@@ -1,0 +1,74 @@
+body{
+  background-color: floralwhite;
+}
+
+.forms {
+  text-align: center;
+  font-weight: bold;
+}
+.forms input {
+  display: block;
+  font-weight: bold;
+}
+
+.forms input:focus{
+  outline-color: blue;
+}
+
+.forms h1 {
+  margin-top: 100px;
+  font-family: sans-serif;
+  margin-left: 30px;
+}
+
+#i1{
+  display: block;
+  margin-left: 45%;
+  margin-top: 5%;
+  width: 200px;
+  height: 30px;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+#i2{
+  display: block;
+  margin-left: 45%;
+  margin-top: 20px;
+  width: 200px;
+  height: 30px;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+#i3{
+  display: block;
+  margin-left: 45%;
+  margin-top: 20px;
+  width: 200px;
+  height: 30px;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+.forms button{
+  background-color: turquoise;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 50px;
+  padding: 13px 55px;
+  cursor: pointer;
+
+}
+
+.forms button:hover {
+  background-color: rgba(64, 224, 208, 0.67);
+  border: 1px solid;
+  transition: 0.5s ease;
+}
+
+.forms #loginmes {
+  margin-top: 89px;
+  margin-left: 40px
+}
