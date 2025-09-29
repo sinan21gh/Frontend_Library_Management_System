@@ -17,11 +17,24 @@ import CreateProductPost from "./ecomproducts/CreateProductPost.jsx";
 function App() {
   return (
       <>
+          <BrowserRouter>
+              <Routes>
+                  <Route path="/register" element={<Register/>} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/book" element={<UploadBook />} />
+                  <Route path="/books" element={<Home />} />
+              </Routes>
+          </BrowserRouter>
+
+
+
+
+
           {/*<GetAllBooks/>*/}
           {/*<GetBook/>*/}
       {/*<UploadBook/>*/}
 
-          <BrowserRouter>
+          {/*<BrowserRouter>
               <Routes>
                   <Route path="/" element={<UserRegister/>}></Route>
                   <Route path="/login" element={<UserLogin/>}></Route>
@@ -31,17 +44,8 @@ function App() {
                   <Route path="/product" element={<CreateProductPost/>}></Route>
 
               </Routes>
-          </BrowserRouter>
+          </BrowserRouter>*/}
 
-
-      {/*<BrowserRouter>
-        <Routes>
-            <Route path="/register" element={<Register/>} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/book" element={<UploadBook />} />
-            <Route path="/books" element={<Home />} />
-        </Routes>
-      </BrowserRouter>*/}
       </>
   );
 }
