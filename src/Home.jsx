@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import userIcon from './assets/user-icon.jpg';
 import {useNavigate} from "react-router-dom";
+import Dropdown from "./Dropdown.jsx";
 
 function Home(){
     const [books, setBooks] = useState([]);
@@ -31,26 +32,16 @@ function Home(){
 
 
     function GoTo(){
-        navigate("/profile");
+        navigate(`/profile}`);
     }
 
     return (
 
         <>
-            <h2 id="n1">All Books</h2>
-            <img id="image2" src={userIcon} alt="sorry" onClick={GoTo}/>
+            <h2 className="n1">All Books</h2>
+            <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>
 
-            <div className="container">
-                <button>☰</button>
-                <div className="dropdown">
-                    <ul>
-                        <li onClick={GoTo}>Login</li>
-                        <li onClick={GoTo}>Profile</li>
-                        <li onClick={GoTo}>Register</li>
-                        <li onClick={GoTo}>Upload Book</li>
-                    </ul>
-                </div>
-            </div>
+            <Dropdown/>
 
             <div id="oneoff">
                 <div>

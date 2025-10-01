@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import userIcon from './assets/user-icon.jpg';
+import LogOut from "./LogOut.jsx";
 
 
 function Profile() {
@@ -28,6 +29,7 @@ function Profile() {
     return (
         <>
             <h2 id="profileh2">My Profile</h2>
+            <LogOut/>
             <div className="profileinfo">
 
                 <img
@@ -39,6 +41,7 @@ function Profile() {
                 <p><strong>Email:</strong> {profile.email}</p>
                 <p><strong>Password:</strong> *************</p>
             </div>
+
         </>
     )
 }

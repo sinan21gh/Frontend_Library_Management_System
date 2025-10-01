@@ -7,6 +7,7 @@ import GetAllBooks from "./BookPages/GetAllBooks.jsx";
 import Profile from "./Profile.jsx";
 import Register from "./Register.jsx";
 import Home from "./Home.jsx";
+import LogOut from "./LogOut.jsx";
 
 
 function App() {
@@ -16,9 +17,11 @@ function App() {
               <Routes>
                   <Route path="/" element={<Register/>} />
                   <Route path="/login" element={<Login />} />
-                  <Route path="/book" element={<UploadBook />} />
                   <Route path="/books" element={<Home />} />
                   <Route path="/profile" element={<Profile/>}></Route>
+                  <Route path="/logout" element={<LogOut/>}></Route>
+                  <Route path="/book" element={<UploadBook />} />
+
               </Routes>
           </BrowserRouter>
 
