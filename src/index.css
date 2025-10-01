@@ -21,7 +21,7 @@ body{
   margin-left: 30px;
 }
 
-#i1{
+.i1{
   display: block;
   margin-left: 45%;
   margin-top: 5%;
@@ -31,7 +31,7 @@ body{
   border-radius: 5px;
   padding: 5px;
 }
-#i2{
+.i2{
   display: block;
   margin-left: 45%;
   margin-top: 20px;
@@ -41,7 +41,7 @@ body{
   border-radius: 5px;
   padding: 5px;
 }
-#i3{
+.i3{
   display: block;
   margin-left: 45%;
   margin-top: 20px;
@@ -68,7 +68,103 @@ body{
   transition: 0.5s ease;
 }
 
-.forms #loginmes {
+.forms .loginmes {
   margin-top: 89px;
   margin-left: 40px
+}
+
+.cards{
+  margin-top: 30px;
+  border: 2px solid;
+  border-radius: 10px;
+  max-width: 250px;
+  height: 250px;
+  float: left;
+  margin-left: 20px;
+  background-color: white;
+  padding: 10px;
+}
+.cards:hover{
+  border: 3px solid blue;
+  transition: 0.1s ease;
+}
+
+#n1 {
+  text-align: center;
+}
+
+.cards img {
+  max-width: 250px;
+  max-height: 150px;
+}
+
+#image1{
+  max-width: 50px;
+  border: 2px solid;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+#image1:hover{
+  border: 2px solid blue;
+}
+
+
+#image2{
+  max-width: 60px;
+  border: 2px solid;
+  border-radius: 10px;
+  float: right;
+  margin-top: -50px;
+}
+
+#image2:hover{
+  border: 2px solid blue;
+}
+
+.cards h3 {
+  float: left;
+}
+
+.dropdown{
+  display: none;
+}
+
+.container:hover .dropdown{
+  display: block;
+}
+.dropdown ul{
+  margin: 0;
+}
+
+.dropdown li{
+  list-style-type: none;
+  border: 1px solid;
+  display: block;
+  padding: 10px 25px;
+  background-color: dimgrey;
+  max-width: 100px;
+}
+
+.dropdown li:hover{
+  background-color: darkgrey;
+  cursor: pointer;
+}
+
+#profileh2{
+  text-align: center;
+
+}
+
+.profileinfo{
+  border: 3px solid black;
+  border-radius: 15px;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+.profileinfo img{
+  margin-top: 10px;
 }

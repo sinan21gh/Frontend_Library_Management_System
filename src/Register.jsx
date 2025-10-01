@@ -27,31 +27,43 @@ function Register() {
         }
     };
 
+    function GoToLogin(){
+        navigate("/login");
+    }
+
     return (
-        <div>
-            <h2>Register</h2>
+        <div className="forms">
+            <h1>Register</h1>
             <form onSubmit={handleRegister}>
                 <input
+                    className="i1"
                     type="text"
                     placeholder="Username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
+                    required
                 /><br/>
                 <input
+                    className="i2"
                     type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    required
                 /><br/>
                 <input
-                    type="text"
+                    className="i3"
+                    type="email"
                     placeholder="Email"
                     value={emial}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                 /><br/>
                 <button type="submit">Register</button>
             </form>
             <p>{message}</p>
+            <p className="loginmes">Already Have An Account?</p>
+            <button onClick={GoToLogin}>Go To Login</button>
         </div>
     );
 }

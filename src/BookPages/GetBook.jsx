@@ -1,6 +1,6 @@
 import {useState} from "react";
 import axios from "axios";
-import AuthorSearchOneDetails from "./AuthorSearchOneDetails.jsx";
+import AuthorSearchOneDetails from "../AuthorPages/AuthorSearchOneDetails.jsx";
 
 function GetBook() {
     const [isbn, setIsbn] = useState("");

@@ -23,7 +23,7 @@ function Login() {
             console.log(res);
 
             setTimeout(() => {
-                navigate("/book")
+                navigate("/books")
             }, 3000)
 
         } catch (err) {
@@ -32,23 +32,37 @@ function Login() {
         }
     };
 
+    function GoToLogin(){
+        navigate("/");
+    }
+
     return (
-        <form onSubmit={handleLogin}>
-            <input
-                type="text"
-                placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-            />
-            <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-            <button type="submit">Login</button>
-            <p>{message}</p>
-        </form>
+        <div className="forms">
+            <h1>Login Page</h1>
+            <form onSubmit={handleLogin}>
+                <input
+                    className="i1"
+                    type="text"
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    required
+                /><br/>
+                <input
+                    className="i2"
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                /><br/>
+                <button type="submit">Login</button>
+                <p>{message}</p>
+            </form>
+
+            <p className="loginmes">Don't Have An Account?</p>
+            <button onClick={GoToLogin}>Sign Up Here</button>
+        </div>
     );
 }
 

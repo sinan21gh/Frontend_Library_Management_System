@@ -1,28 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Login";
-import PostAuthor from "./PostAuthor.jsx";
-import UploadBook from "./UploadBook.jsx";
-import GetBook from "./GetBook.jsx";
-import GetAllBooks from "./GetAllBooks.jsx";
+import PostAuthor from "./AuthorPages/PostAuthor.jsx";
+import UploadBook from "./BookPages/UploadBook.jsx";
+import GetBook from "./BookPages/GetBook.jsx";
+import GetAllBooks from "./BookPages/GetAllBooks.jsx";
 import Profile from "./Profile.jsx";
 import Register from "./Register.jsx";
 import Home from "./Home.jsx";
-import UserRegister from "./ecom/UserRegister.jsx";
-import UserLogin from "./ecom/UserLogin.jsx";
-import UserProfile from "./ecom/UserProfile.jsx";
-import PartialUpdateUser from "./ecom/PartialUpdateUser.jsx";
-import DeleteUser from "./ecom/DeleteUser.jsx";
-import CreateProductPost from "./ecomproducts/CreateProductPost.jsx";
+
 
 function App() {
   return (
       <>
           <BrowserRouter>
               <Routes>
-                  <Route path="/register" element={<Register/>} />
+                  <Route path="/" element={<Register/>} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/book" element={<UploadBook />} />
                   <Route path="/books" element={<Home />} />
+                  <Route path="/profile" element={<Profile/>}></Route>
               </Routes>
           </BrowserRouter>
 
