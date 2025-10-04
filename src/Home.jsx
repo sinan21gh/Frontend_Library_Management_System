@@ -32,7 +32,7 @@ function Home(){
 
 
     function GoTo(){
-        navigate(`/profile}`);
+        navigate(`/profile`);
     }
 
     return (

@@ -20,12 +20,16 @@ function PutBook(){
                     name: name,
                     age: parseInt(age)
                 }
+            }, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                }
             });
 
             if(response.status === 200){
                 setMessage("Successfully Updated")
             }
-            else{
+            else if (response.status === 201){
                 setMessage("Successfully Created")
             }
 

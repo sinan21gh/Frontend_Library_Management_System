@@ -61,6 +61,7 @@ function UploadBook() {
             </div>
             <div className="t2">
                 <button className="tb1">ⓘ<p>ISBN should have 17 characters including 4 dashes</p></button>
+                <button className="tb2">ⓘ<p>Author ID must match a real author</p></button>
             </div>
         </>
     );
