@@ -8,6 +8,7 @@ import Profile from "./Profile.jsx";
 import Register from "./Register.jsx";
 import Home from "./Home.jsx";
 import LogOut from "./LogOut.jsx";
+import PutBook from "./BookPages/PutBook.jsx";
 
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
                   <Route path="/logout" element={<LogOut/>}></Route>
                   <Route path="/book" element={<UploadBook />} />
                   <Route path="/getBook" element={<GetBook/>}></Route>
+                  <Route path="/updateBook" element={<PutBook/>}></Route>
+                  <Route path="/createAuthor" element={<PostAuthor/>}></Route>
+
               </Routes>
           </BrowserRouter>
 

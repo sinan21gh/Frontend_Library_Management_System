@@ -7,7 +7,11 @@ export default function AuthorSearchOneDetails() {
     const [error, setError] = useState(null);
 
     const fetchAuthor = () => {
-        axios.get(`http://localhost:8080/about/${authorid}`)
+        axios.get(`http://localhost:8080/about/${authorid}`, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            }
+        })
             .then(response => {
                 setAuthor(response.data);
                 setError(null);

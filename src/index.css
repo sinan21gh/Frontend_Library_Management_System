@@ -327,7 +327,95 @@ body{
   display: inline-block;
 }
 
+.puttingbooks{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
 
+.puttingbooks input{
+  display: block;
+  margin-top: 20px;
+  padding: 10px 5px;
+  width: 20vw;
+  border-radius: 5px;
+  box-shadow: 2px 2px darkslategrey;
+  font-weight: bold;
+}
+
+.puttingbooks input:focus{
+  outline-color: darkblue;
+  box-shadow: 2px 2px darkblue;
+}
+
+.puttingbooks button{
+  margin-top: 30px;
+  margin-left: 120px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: slategrey;
+  color: aliceblue;
+}
+
+.puttingbooks button:hover{
+  background-color: darkslategrey;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.postauthor{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-top: 100px;
+}
+.postauthor input{
+  display: block;
+  margin-top: 20px;
+  padding: 10px 5px;
+  width: 20vw;
+  border-radius: 5px;
+  box-shadow: 2px 2px darkslategrey;
+  font-weight: bold;
+}
+
+.postauthor input:focus{
+  outline-color: darkblue;
+  box-shadow: 2px 2px darkblue;
+}
+
+.postauthor button{
+  margin-top: 30px;
+  margin-left: 120px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: slategrey;
+  color: aliceblue;
+}
+
+.postauthor button:hover{
+  background-color: darkslategrey;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+#po{
+  font-size: 1.5em;
+  border: 0 ;
+  padding: 10px 20px;
+  background-color: #50ef50;
+  text-align: center;
+}
+
+#pl{
+  font-size: 1.5em;
+  border: 0 ;
+  padding: 10px 20px;
+  background-color: #fd0808;
+  text-align: center;
+}
 
 @media screen and (max-width: 600px) {
   .singleBook {

@@ -13,7 +13,12 @@ function PatchAuthor() {
             if (name) body.name = name;
             if (age) body.age = parseInt(age);
 
-            const response = await axios.patch(`http://localhost:8080/about/${id}`, body);
+            const response = await axios.patch(`http://localhost:8080/about/${id}`, body, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                }
+
+            });
             console.log("Patched:", response.data);
             alert("Author partially updated!");
         } catch (error) {

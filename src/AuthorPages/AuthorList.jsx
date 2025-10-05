@@ -6,7 +6,12 @@ function AuthorList() {
     const [authors, setAuthors] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8080/author")
+        axios.get("http://localhost:8080/author", {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            }
+
+        })
             .then(response => {
                 setAuthors(response.data);
             })

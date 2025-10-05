@@ -1,5 +1,8 @@
 import {useState} from "react";
 import axios from "axios";
+import Dropdown from "../Dropdown.jsx";
+import {useNavigate} from "react-router-dom";
+import userIcon from "../assets/user-icon.jpg";
 
 function PutBook(){
     const [isbn, setISBN] = useState("");
@@ -8,6 +11,8 @@ function PutBook(){
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
     const [message, setMessage] = useState("");
+    const navigate = useNavigate();
+
 
     const handlePut = async (e) => {
         e.preventDefault();
@@ -45,33 +50,48 @@ function PutBook(){
         }
     }
 
+    function GoTo(){
+        navigate(`/profile`);
+    }
+
     return (
         <>
-        <h1>Create/Update book</h1>
+            <div>
+                <header style={{textAlign:"center"}}>
+                    <h1>Create/Update book</h1>
+                </header>
 
-        <form onSubmit={handlePut}>
-            <input type="text" placeholder="ISBN" value={isbn} onChange={(e) => setISBN(e.target.value)}
-            />
+                <nav style={{marginBottom:"100px"}}>
+                    <Dropdown/>
 
-            <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)}
-            />
+                    <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>
 
-            <input type="number" placeholder="Author ID" value={authorID} onChange={(e) => setAuthorID(e.target.value)}
-            />
+                </nav>
 
-            <input type="text" placeholder="Author Name" value={name} onChange={(e) => setName(e.target.value)}
-            />
+                <main className="puttingbooks">
+                    <form onSubmit={handlePut}>
+                        <input type="text" placeholder="ISBN" value={isbn} onChange={(e) => setISBN(e.target.value)}
+                        />
 
-            <input type="number" placeholder="Author Age" value={age} onChange={(e) => setAge(e.target.value)}
-            />
+                        <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)}
+                        />
 
-            <button type="submit">Submit</button>
+                        <input type="number" placeholder="Author ID" value={authorID} onChange={(e) => setAuthorID(e.target.value)}
+                        />
 
-        </form>
+                        <input type="text" placeholder="Author Name" value={name} onChange={(e) => setName(e.target.value)}
+                        />
 
-            {message && <p>${message}</p>}
+                        <input type="number" placeholder="Author Age" value={age} onChange={(e) => setAge(e.target.value)}
+                        />
 
+                        <button type="submit">Submit</button>
 
+                    </form>
+
+                    {message && <p>{message}</p>}
+                </main>
+            </div>
         </>
     )
 }

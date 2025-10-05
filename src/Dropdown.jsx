@@ -18,6 +18,9 @@ function Dropdown(){
                     <li onClick={() => GoTo("book")}>Upload Book</li>
                     <li onClick={() => GoTo("books")}>Home</li>
                     <li onClick={() => GoTo("getBook")}>Search for a book</li>
+                    <li onClick={() => GoTo("updateBook")}>Update Book</li>
+                    <li onClick={() => GoTo("createAuthor")}>Create Author</li>
+
                 </ul>
             </div>
         </div>

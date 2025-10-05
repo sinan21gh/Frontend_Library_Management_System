@@ -11,7 +11,11 @@ function PutAuthors(){
             const response = await axios.put(`http://localhost:8080/about/${id}`, {
                 name: name,
                 age: parseInt(age)
-            });
+            }, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                }}
+            );
             console.log("Author updated:", response.data);
             alert("Author updated successfully!");
         } catch (error) {

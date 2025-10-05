@@ -6,7 +6,11 @@ function DeleteAuthor() {
 
     const handleDelete = async () => {
         try {
-            const response = await axios.delete(`http://localhost:8080/about/${id}`);
+            const response = await axios.delete(`http://localhost:8080/about/${id}`, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                }
+            });
             if (response.status === 204) {
                 alert(`Author with ID ${id} deleted successfully!`);
             }
