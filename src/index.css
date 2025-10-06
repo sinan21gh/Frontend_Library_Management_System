@@ -83,9 +83,27 @@ body{
   margin-left: 20px;
   background-color: white;
   padding: 10px;
+  list-style-type: none;
 }
 .cards:hover{
-  border: 3px solid blue;
+  border: 2px solid blue;
+  transition: 0.1s ease;
+}
+
+.cardss{
+  margin-top: 30px;
+  border: 2px solid;
+  border-radius: 10px;
+  max-width: 150px;
+  height: 150px;
+  float: left;
+  margin-left: 20px;
+  background-color: white;
+  padding: 10px;
+  list-style-type: none;
+}
+.cardss:hover{
+  border: 2px solid blue;
   transition: 0.1s ease;
 }
 
@@ -269,6 +287,43 @@ body{
 .searching{
   text-align: center;
 }
+.searchingg{
+  text-align: center;
+}
+
+.searchingg main{
+  border: 2px solid;
+  max-height: 100px;
+  max-width: 500px;
+  margin-left: 30%;
+}
+
+.searchingg section{
+  padding: 20px;
+  text-align: left;
+}
+
+.searchingg section input{
+  width: 300px;
+  height: 55px;
+  text-align: left;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+.searchingg section button{
+  float: right;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: slategrey;
+  color: aliceblue;
+}
+
+.searchingg button:hover{
+  background-color: darkslategrey;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
 
 #s21{
   height: 45px;
@@ -325,6 +380,21 @@ body{
   float: right;
   margin-bottom: auto;
   display: inline-block;
+}
+
+.authorget{
+  font-size: 2rem;
+  margin-top: 10%;
+  border: 3px solid;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px 15px;
+  display: inline-block;
+  box-shadow: 2px 2px black;
+}
+.authorget p {
+  text-align: center;
+  font-weight: bold;
 }
 
 .puttingbooks{

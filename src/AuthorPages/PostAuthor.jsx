@@ -9,6 +9,8 @@ function PostAuthor() {
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
     const [message, setMessage] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
+
     const navigate = useNavigate();
 
 
@@ -30,7 +32,7 @@ function PostAuthor() {
             setAge("");
         } catch (err) {
             console.error("Error creating author:", err);
-            setMessage(null);
+            setErrorMessage("Error creating author");
         }
     };
 
@@ -71,7 +73,7 @@ function PostAuthor() {
                 </form>
 
                 {message && <p id="po">{message}</p>}
-                {!message && <p id="pl">Error creating author</p>}
+                {errorMessage && <p id="pl">Error creating author</p>}
             </main>
 
         </div>

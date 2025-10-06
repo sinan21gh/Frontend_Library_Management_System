@@ -20,6 +20,10 @@ function Dropdown(){
                     <li onClick={() => GoTo("getBook")}>Search for a book</li>
                     <li onClick={() => GoTo("updateBook")}>Update Book</li>
                     <li onClick={() => GoTo("createAuthor")}>Create Author</li>
+                    <li onClick={() => GoTo("getAllAuthors")}>Find All Authors</li>
+                    <li onClick={() => GoTo("getAuthor")}>Find An Author</li>
+
+
 
                 </ul>
             </div>

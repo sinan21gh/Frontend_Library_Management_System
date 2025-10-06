@@ -9,6 +9,8 @@ import Register from "./Register.jsx";
 import Home from "./Home.jsx";
 import LogOut from "./LogOut.jsx";
 import PutBook from "./BookPages/PutBook.jsx";
+import AuthorList from "./AuthorPages/AuthorList.jsx";
+import AuthorSearchOneDetails from "./AuthorPages/AuthorSearchOneDetails.jsx";
 
 
 function App() {
@@ -25,6 +27,10 @@ function App() {
                   <Route path="/getBook" element={<GetBook/>}></Route>
                   <Route path="/updateBook" element={<PutBook/>}></Route>
                   <Route path="/createAuthor" element={<PostAuthor/>}></Route>
+                  <Route path="/getAllAuthors" element={<AuthorList/>}></Route>
+                  <Route path="/getAuthor" element={<AuthorSearchOneDetails/>}></Route>
+
+
 
               </Routes>
           </BrowserRouter>

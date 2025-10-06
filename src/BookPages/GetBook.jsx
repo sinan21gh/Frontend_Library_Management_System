@@ -30,17 +30,24 @@ function GetBook() {
     return (
         <>
             <div className="searching">
-                <Dropdown/>
-                <input
-                    className="s11"
-                    type="text"
-                    placeholder="Enter ISBN"
-                    value={isbn}
-                    onChange={(e) => setIsbn(e.target.value)}/>
-                <button id="s21" onClick={handleFetch}>Fetch Book</button>
+                <header style={{textAlign:"center"}}>
+                    <h1>Find Book By ISBN</h1>
+                </header>
+
+                <nav>
+                    <Dropdown/>
+                </nav>
 
                 <main>
                     <section>
+                        <input
+                            className="s11"
+                            type="text"
+                            placeholder="Enter ISBN"
+                            value={isbn}
+                            onChange={(e) => setIsbn(e.target.value)}/>
+                        <button id="s21" onClick={handleFetch}>Fetch Book</button>
+
                         {book && (
                             <div className="singleBook">
                                 <h2>Title: {book.title}
@@ -63,12 +70,7 @@ function GetBook() {
                         )}
                     </section>
 
-                    <div className="authorfact">
-                        <h2>The Author who made this book</h2>
-                        <h2>Author ID: {book.authorid?.authorid}</h2>
-                        <h2>Author Name: {book?.authorid?.name}</h2>
-                        <h2>Author Age: {book?.authorid?.age}</h2>
-                    </div>
+
 
                 </main>
             </div>

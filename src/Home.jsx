@@ -48,7 +48,7 @@ function Home(){
                     {books.map((book) => (
                         <div key={book.isbn} className="cards">
                             <h3>{book.title}</h3>
-                            <img id="image1" src={userIcon} alt="sorry" onClick={GoTo}/>
+                            <img id="image1" src={userIcon} alt="User Profile" onClick={GoTo}/>
 
                             <p>Author: {book?.authorid?.name}</p>
                             {book.imageBase64 && (
