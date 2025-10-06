@@ -29,9 +29,6 @@ function App() {
                   <Route path="/createAuthor" element={<PostAuthor/>}></Route>
                   <Route path="/getAllAuthors" element={<AuthorList/>}></Route>
                   <Route path="/getAuthor" element={<AuthorSearchOneDetails/>}></Route>
-
-
-
               </Routes>
           </BrowserRouter>
 

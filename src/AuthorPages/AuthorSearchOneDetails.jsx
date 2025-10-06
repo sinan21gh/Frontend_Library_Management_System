@@ -4,6 +4,8 @@ import Dropdown from "../Dropdown.jsx";
 import userIcon from "../assets/user-icon.jpg";
 import {useNavigate} from "react-router-dom";
 
+import useIcon from "../assets/search.png";
+
 export default function AuthorSearchOneDetails() {
     const [authorid, setAuthorid] = useState("");
     const [author, setAuthor] = useState(null);
@@ -35,7 +37,7 @@ export default function AuthorSearchOneDetails() {
     return (
         <>
 
-        <div className="searchingg">
+        {/*<div className="searchingg">*/}
             <header style={{textAlign:"center"}}>
                 <h1>Find Author by ID</h1>
             </header>
@@ -45,7 +47,26 @@ export default function AuthorSearchOneDetails() {
                 <Dropdown/>
             </nav>
 
-            <main>
+
+            <div className="searching">
+                <main>
+                    <section>
+                        <div id="loi">
+                            <input
+                                type="number"
+                                placeholder="Enter author ID"
+                                value={authorid}
+                                onChange={(e) => setAuthorid(e.target.value)}
+                                className="s11"
+                            />
+                            <img id="s21" onClick={fetchAuthor} src={useIcon}/>
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+
+                {/*<main>
                 <section>
                     <input
                         type="number"
@@ -56,7 +77,7 @@ export default function AuthorSearchOneDetails() {
                     />
                     <button onClick={fetchAuthor}>Search</button>
                 </section>
-            </main>
+            </main>*/}
 
 
             {error && <p>{error}</p>}
@@ -69,7 +90,7 @@ export default function AuthorSearchOneDetails() {
                     <p><strong>Name:</strong> {author.name}</p>
                 </div>
             )}
-        </div>
+        {/*</div>*/}
         </>
     );
 }

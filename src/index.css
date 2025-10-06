@@ -1,11 +1,46 @@
 body{
   background-color: floralwhite;
+  margin: 0;
 }
 
-.forms {
+.body1{
+  background-image: url("assets/blackbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  min-width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.body2{
+  background-image: url("assets/bluebackground.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  min-width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.body1 .forms {
   text-align: center;
   font-weight: bold;
+  border: 2px solid rgba(192, 192, 192, 0.4);
+  border-radius: 10px;
+  margin-left: 40%;
+  margin-top: 100px;
+  min-width: 400px;
+  max-width: fit-content;
+  height: fit-content;
+  backdrop-filter: blur(2px);
+
 }
+
+.forms form{
+  padding: 50px;
+}
+
 .forms input {
   display: block;
   font-weight: bold;
@@ -16,16 +51,13 @@ body{
 }
 
 .forms h1 {
-  margin-top: 100px;
   font-family: sans-serif;
-  margin-left: 30px;
 }
 
 .i1{
   display: block;
-  margin-left: 45%;
   margin-top: 5%;
-  width: 200px;
+  width: 280px;
   height: 30px;
   border: 2px solid;
   border-radius: 5px;
@@ -33,9 +65,8 @@ body{
 }
 .i2{
   display: block;
-  margin-left: 45%;
   margin-top: 20px;
-  width: 200px;
+  width: 280px;
   height: 30px;
   border: 2px solid;
   border-radius: 5px;
@@ -43,35 +74,53 @@ body{
 }
 .i3{
   display: block;
-  margin-left: 45%;
   margin-top: 20px;
-  width: 200px;
+  width: 280px;
   height: 30px;
   border: 2px solid;
   border-radius: 5px;
   padding: 5px;
 }
 .forms button{
-  background-color: turquoise;
+  background-color: rgba(255, 255, 255, 0.53);
   margin-top: 15px;
   border: none;
   border-radius: 10px;
-  margin-left: 50px;
   padding: 13px 55px;
   cursor: pointer;
 
 }
 
 .forms button:hover {
-  background-color: rgba(64, 224, 208, 0.67);
+  background-color: rgba(255, 255, 255, 0.18);
   border: 1px solid;
   transition: 0.5s ease;
+  color: aliceblue;
 }
 
-.forms .loginmes {
-  margin-top: 89px;
-  margin-left: 40px
+.loginmes {
+  margin-top: 50px;
+  margin-left: 48%;
+  color: white;
 }
+
+.f1{
+  background-color: rgba(255, 255, 255, 0.53);
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 48%;
+  padding: 13px 55px;
+  cursor: pointer;
+}
+
+.f1:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  border: 1px solid;
+  transition: 0.5s ease;
+  color: aliceblue;
+}
+
 
 .cards{
   margin-top: 30px;
@@ -121,26 +170,49 @@ body{
   border: 2px solid;
   border-radius: 10px;
   margin-left: 10px;
+
 }
 
 #image1:hover{
   border: 2px solid blue;
 }
 
-
-.image2{
-  max-width: 60px;
+#image4{
+  max-width: 50px;
   border: 2px solid;
   border-radius: 10px;
-  float: right;
-  margin-top: -50px;
+  margin-left: 35%;
 }
 
-
-
-#image2:hover{
+#image4:hover{
   border: 2px solid blue;
 }
+
+
+.i22{
+  width: 70px;
+  border: 2px solid grey;
+  background-color: rgba(112, 128, 144, 0.18);
+  border-radius: 25px;
+  padding: 5px;
+  float: right;
+}
+
+.image2{
+  max-width: 35px;
+  border: 2px solid;
+  border-radius: 15px;
+  margin-left: 25%;
+}
+
+
+
+.image2:hover{
+  border: 2px solid blue;
+  cursor: pointer;
+}
+
+
 
 .cards h3 {
   float: left;
@@ -327,15 +399,19 @@ body{
 
 #s21{
   height: 45px;
-  border: none;
-  border-radius: 5px;
-  background-color: #50ef50;
-  margin-left: 2px;
+  margin-left: 20px;
+  width: fit-content;
 }
 #s21:hover{
-  background-color: #25ef25;
-  transition: 0.5s ease;
   cursor: pointer;
+}
+
+#loi{
+  /*border: 2px solid;*/
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
 }
 
 .s11{
@@ -345,7 +421,7 @@ body{
   margin-bottom: 200px;
   font-weight: bold;
   font-size: medium;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
 .s11:focus{
@@ -360,6 +436,7 @@ body{
   border: 2px solid;
   border-radius: 10px;
   width: 70vw;
+  color: white;
 }
 .singleBook img{
   border-right: 2px solid;
@@ -370,6 +447,7 @@ body{
 .text-column{
   flex-grow: 1;
   padding-left: 15px;
+  color: white;
 }
 
 .authorfact{
@@ -384,13 +462,14 @@ body{
 
 .authorget{
   font-size: 2rem;
-  margin-top: 10%;
-  border: 3px solid;
+  margin-left: 40%;
+  border: 3px solid rgba(255, 255, 255, 0.44);
   border-radius: 10px;
   width: fit-content;
   padding: 10px 15px;
   display: inline-block;
   box-shadow: 2px 2px black;
+
 }
 .authorget p {
   text-align: center;

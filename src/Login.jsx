@@ -37,31 +37,32 @@ function Login() {
     }
 
     return (
-        <div className="forms">
-            <h1>Login Page</h1>
-            <form onSubmit={handleLogin}>
-                <input
-                    className="i1"
-                    type="text"
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    required
-                /><br/>
-                <input
-                    className="i2"
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                /><br/>
-                <button type="submit">Login</button>
-                <p>{message}</p>
-            </form>
-
+        <div className="body1">
+            <div className="forms">
+                <h1 style={{color:"white"}}>Login Page</h1>
+                <form onSubmit={handleLogin}>
+                    <input
+                        className="i1"
+                        type="text"
+                        placeholder="Username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        required
+                    /><br/>
+                    <input
+                        className="i2"
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    /><br/>
+                    <button type="submit">Login</button>
+                    <p style={{color:"white"}}>{message}</p>
+                </form>
+            </div>
             <p className="loginmes">Don't Have An Account?</p>
-            <button onClick={GoToLogin}>Sign Up Here</button>
+            <button className="f1" onClick={GoToLogin}>Sign Up Here</button>
         </div>
     );
 }

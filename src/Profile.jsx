@@ -28,8 +28,8 @@ function Profile() {
     if (!profile) return <p>Loading profile...</p>;
 
     return (
-        <>
-            <h2 id="profileh2">My Profile</h2>
+        <div className="body2">
+            <h1 style={{color:"white"}} id="profileh2">My Profile</h1>
             <Dropdown/>
             <LogOut/>
 
@@ -45,7 +45,7 @@ function Profile() {
                 <p><strong>Password:</strong> *************</p>
             </div>
 
-        </>
+        </div>
     )
 }
 

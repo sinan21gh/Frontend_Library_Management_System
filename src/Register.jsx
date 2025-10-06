@@ -32,39 +32,44 @@ function Register() {
     }
 
     return (
-        <div className="forms">
-            <h1>Register</h1>
-            <form onSubmit={handleRegister}>
-                <input
-                    className="i1"
-                    type="text"
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    required
-                /><br/>
-                <input
-                    className="i2"
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                /><br/>
-                <input
-                    className="i3"
-                    type="email"
-                    placeholder="Email"
-                    value={emial}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                /><br/>
-                <button type="submit">Register</button>
-            </form>
-            <p>{message}</p>
-            <p className="loginmes">Already Have An Account?</p>
-            <button onClick={GoToLogin}>Go To Login</button>
-        </div>
+
+            <div className="body1">
+                <div className="forms">
+                    <h1 style={{color:"white"}}>Register</h1>
+                    <form onSubmit={handleRegister}>
+                        <input
+                            className="i1"
+                            type="text"
+                            placeholder="Username"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
+                        /><br/>
+                        <input
+                            className="i2"
+                            type="password"
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        /><br/>
+                        <input
+                            className="i3"
+                            type="email"
+                            placeholder="Email"
+                            value={emial}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        /><br/>
+                        <button type="submit">Register</button>
+                    </form>
+                    <p style={{color:"white"}}>{message}</p>
+                </div>
+                <p className="loginmes">Already Have An Account?</p>
+                <button className="f1" onClick={GoToLogin}>Go To Login</button>
+            </div>
+
+
     );
 }
 

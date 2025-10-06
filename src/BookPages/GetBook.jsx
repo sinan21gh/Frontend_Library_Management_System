@@ -2,8 +2,9 @@ import {useState} from "react";
 import axios from "axios";
 import AuthorSearchOneDetails from "../AuthorPages/AuthorSearchOneDetails.jsx";
 import Dropdown from "../Dropdown.jsx";
+import userIcon from '../assets/search.png';
 
-function GetBook() {
+function GetBook(props) {
     const [isbn, setIsbn] = useState("");
     const [book, setBook] = useState(null);
 
@@ -37,16 +38,18 @@ function GetBook() {
                 <nav>
                     <Dropdown/>
                 </nav>
-
                 <main>
                     <section>
-                        <input
-                            className="s11"
-                            type="text"
-                            placeholder="Enter ISBN"
-                            value={isbn}
-                            onChange={(e) => setIsbn(e.target.value)}/>
-                        <button id="s21" onClick={handleFetch}>Fetch Book</button>
+                        <div id="loi">
+                            <input
+                                className="s11"
+                                type="text"
+                                placeholder="Enter ISBN"
+                                value={isbn}
+                                onChange={(e) => setIsbn(e.target.value)}/>
+                            <img id="s21" onClick={handleFetch} src={userIcon}/>
+                        </div>
+
 
                         {book && (
                             <div className="singleBook">
@@ -69,9 +72,6 @@ function GetBook() {
                             </div>
                         )}
                     </section>
-
-
-
                 </main>
             </div>
         </>
@@ -79,4 +79,3 @@ function GetBook() {
 }
 
 export default GetBook;
-386362

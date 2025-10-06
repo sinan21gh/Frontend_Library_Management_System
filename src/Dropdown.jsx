@@ -17,11 +17,11 @@ function Dropdown(){
                     <li onClick={() => GoTo("")}>Register</li>
                     <li onClick={() => GoTo("book")}>Upload Book</li>
                     <li onClick={() => GoTo("books")}>Home</li>
-                    <li onClick={() => GoTo("getBook")}>Search for a book</li>
+                    {/*<li onClick={() => GoTo("getBook")}>Search for a book</li>*/}
                     <li onClick={() => GoTo("updateBook")}>Update Book</li>
                     <li onClick={() => GoTo("createAuthor")}>Create Author</li>
                     <li onClick={() => GoTo("getAllAuthors")}>Find All Authors</li>
-                    <li onClick={() => GoTo("getAuthor")}>Find An Author</li>
+                    {/*<li onClick={() => GoTo("getAuthor")}>Find An Author</li>*/}
 
 
 
