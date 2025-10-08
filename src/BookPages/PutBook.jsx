@@ -56,15 +56,17 @@ function PutBook(){
 
     return (
         <>
-            <div>
+            <div className="body3">
                 <header style={{textAlign:"center"}}>
-                    <h1>Create/Update book</h1>
+                    <h1 style={{color:"white"}}>Create/Update book</h1>
                 </header>
 
                 <nav style={{marginBottom:"100px"}}>
+                    <div className="i22">
+                        <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>
+                    </div>
                     <Dropdown/>
 
-                    <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>
 
                 </nav>
 

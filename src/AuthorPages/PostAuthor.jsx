@@ -41,15 +41,17 @@ function PostAuthor() {
     }
 
     return (
-        <div>
+        <div className="body4">
             <header style={{textAlign:"center"}}>
-                <h1>Add Author</h1>
+                <h1 style={{color:"white"}}>Add Author</h1>
             </header>
 
             <nav>
+                <div className="i22">
+                    <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>
+                </div>
                 <Dropdown/>
 
-                <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo} title="Profile"/>
 
             </nav>
 
@@ -63,6 +65,7 @@ function PostAuthor() {
                         required
                     />
                     <input
+
                         type="number"
                         placeholder="Age"
                         value={age}

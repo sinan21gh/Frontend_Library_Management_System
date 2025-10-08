@@ -1,6 +1,8 @@
 body{
   background-color: floralwhite;
   margin: 0;
+  min-height: 100vh;
+
 }
 
 .body1{
@@ -9,7 +11,7 @@ body{
   background-position: center;
   margin: 0;
   min-width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: absolute;
 }
 
@@ -21,6 +23,45 @@ body{
   min-width: 100vw;
   height: 100vh;
   position: absolute;
+}
+
+
+.body2 .profileinfo {
+  backdrop-filter: blur(10px);
+}
+
+.body3{
+  background-image: url("assets/greenbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  min-width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+
+.body3 .puttingbooks {
+  backdrop-filter: blur(10px);
+}
+
+.body4{
+  background-image: url("assets/multi.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  min-width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+
+.body4 .postauthor {
+  backdrop-filter: blur(5px);
+}
+
+.body4 .postauthorr {
+  backdrop-filter: blur(5px);
 }
 
 .body1 .forms {
@@ -255,12 +296,11 @@ body{
 }
 
 .profileinfo{
-  border: 3px solid black;
+  border: 3px solid #6b32dd;
   border-radius: 15px;
   max-width: 400px;
   margin: auto;
   text-align: center;
-  background-color: aliceblue;
 }
 
 .profileinfo img{
@@ -268,15 +308,17 @@ body{
 }
 
 
+
+
 .bookupload{
-  border: 3px solid;
+  border: 3px solid rgba(255, 255, 255, 0.38);
   text-align: center;
   max-width: 500px;
   border-radius: 10px;
   padding: 10px;
   margin-left: 30vw;
   margin-top: 20vh;
-  box-shadow: 4px 5px dimgrey;
+  box-shadow: 4px 5px rgba(105, 105, 105, 0.44);
   float: left;
 }
 
@@ -311,15 +353,21 @@ body{
   margin-top: 20px;
   margin-left: 370px;
   max-width: 150px;
-  border: none;
+  border: 2px solid;
   border-radius: 10px;
   background-color: dimgrey;
 }
 
 .booki5:hover{
-  background-color: darkgrey;
+  background-color: rgba(255, 255, 255, 0.18);
+
   transition: 0.5s ease;
+  cursor: pointer;
+  border: 2px solid;
+  color: whitesmoke;
 }
+
+
 
 .tb1{
   margin-top: 170px;
@@ -338,7 +386,7 @@ body{
 
 .tb2{
   margin-top: 300px;
-  margin-left: -29px;
+  margin-left: -20px;
   width: 30px;
   float: left;
 }
@@ -349,11 +397,15 @@ body{
   display: inline-block;
   font-weight: bold;
   width: 230px;
+  color: aliceblue;
 }
 
 .t2 button{
   border: none;
-  background-color: floralwhite;
+  width: 20px;
+  height: 20px;
+  background: none;
+  color: aliceblue;
 }
 
 .searching{
@@ -480,6 +532,11 @@ body{
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  border: 2px solid white;
+  width: fit-content;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .puttingbooks input{
@@ -517,17 +574,24 @@ body{
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  margin-top: 100px;
+  border: 2px solid white;
+  width: fit-content;
+  margin: auto;
+  margin-top: 200px;
+  padding: 20px;
+  border-radius: 10px;
 }
 .postauthor input{
   display: block;
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 10px 5px;
   width: 20vw;
+  height: 20px;
   border-radius: 5px;
   box-shadow: 2px 2px darkslategrey;
   font-weight: bold;
 }
+
 
 .postauthor input:focus{
   outline-color: darkblue;
@@ -565,6 +629,53 @@ body{
   background-color: #fd0808;
   text-align: center;
 }
+
+
+.postauthorr{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid white;
+  width: fit-content;
+  margin: auto;
+  margin-top: 160px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.postauthorr input{
+  display: block;
+  margin-top: 30px;
+  padding: 10px 5px;
+  width: 20vw;
+  height: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px darkslategrey;
+  font-weight: bold;
+}
+
+.postauthorr input:focus{
+  outline-color: darkblue;
+  box-shadow: 2px 2px darkblue;
+}
+
+.postauthorr button{
+  margin-top: 30px;
+  padding: 10px 25px;
+  border: 1px;
+  border-radius: 5px;
+  background-color: slategrey;
+  color: aliceblue;
+}
+
+.postauthorr button:hover{
+  background-color: rgba(128, 128, 128, 0.3);
+  transition: 0.5s ease;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
 
 @media screen and (max-width: 600px) {
   .singleBook {

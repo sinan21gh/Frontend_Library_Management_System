@@ -60,7 +60,10 @@ function AuthorList() {
             </header>
 
             <nav>
-                <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>
+                <div className="i22">
+                    <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>
+                </div>
+
                 <Dropdown/>
             </nav>
 

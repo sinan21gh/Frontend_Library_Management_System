@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
+import userIcon from "../assets/user-icon.jpg";
+import Dropdown from "../Dropdown.jsx";
+import {useNavigate} from "react-router-dom";
 
 function PutAuthors(){
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
     const [id, setId] = useState("");
+    const navigate = useNavigate();
 
     const handleUpdate = async () => {
         try {
@@ -24,31 +28,49 @@ function PutAuthors(){
         }
     };
 
+    function GoTo(){
+        navigate(`/profile`);
+    }
+
     return (
-        <div>
-            <h2>Update Author</h2>
-            <input
-                type="text"
-                placeholder="Author ID"
-                value={id}
-                onChange={(e) => setId(e.target.value)}
-            />
-            <br />
-            <input
-                type="text"
-                placeholder="Author Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-            />
-            <br />
-            <input
-                type="number"
-                placeholder="Author Age"
-                value={age}
-                onChange={(e) => setAge(e.target.value)}
-            />
-            <br />
-            <button onClick={handleUpdate}>Update Author</button>
+        <div className="body4">
+            <header style={{textAlign:"center"}}>
+                <h1 style={{color:"white"}}>Update Author</h1>
+            </header>
+
+            <nav>
+                <div className="i22">
+                    <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>
+                </div>
+                <Dropdown/>
+            </nav>
+
+            <main className="postauthorr">
+                <input
+                    type="text"
+                    placeholder="Author ID"
+                    value={id}
+                    onChange={(e) => setId(e.target.value)}
+                />
+                <br />
+                <input
+                    type="text"
+                    placeholder="Author Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                />
+                <br />
+                <input
+                    type="number"
+                    placeholder="Author Age"
+                    value={age}
+                    onChange={(e) => setAge(e.target.value)}
+                />
+                <br />
+                <button onClick={handleUpdate}>Update Author</button>
+            </main>
+
+
         </div>
     );
 };

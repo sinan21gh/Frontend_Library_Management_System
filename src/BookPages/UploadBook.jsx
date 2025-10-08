@@ -42,10 +42,12 @@ function UploadBook() {
     }
 
     return (
-        <>
-            <h2 className="n1">Upload A Book Here</h2>
+        <div className="body1">
+            <h2 className="n1" style={{color:"white"}}>Upload A Book Here</h2>
+            <div className="i22">
+                <img className="image2" src={userIcon} alt="User pfp" onClick={goTo} title="Your Prfile"/>
 
-            <img className="image2" src={userIcon} alt="User pfp" onClick={goTo} title="Your Prfile"/>
+            </div>
 
             <Dropdown/>
 
@@ -56,14 +58,14 @@ function UploadBook() {
                     <input className="booki3" type="number" placeholder="Author ID" value={authorId} onChange={(e) => setAuthorId(e.target.value)} required />
                     <input className="booki4" type="file" onChange={(e) => setFile(e.target.files[0])} required/>
                     <button className="booki5" type="submit">Upload Book</button>
-                    <p>{message}</p>
+                    <p style={{color:"white"}}>{message}</p>
                 </form>
             </div>
             <div className="t2">
                 <button className="tb1">ⓘ<p>ISBN should have 17 characters including 4 dashes</p></button>
                 <button className="tb2">ⓘ<p>Author ID must match a real author</p></button>
             </div>
-        </>
+        </div>
     );
 }
 
