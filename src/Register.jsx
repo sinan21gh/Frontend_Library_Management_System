@@ -31,9 +31,16 @@ function Register() {
         navigate("/login");
     }
 
+    function GoToAbout(){
+        navigate("/about");
+    }
+
     return (
 
             <div className="body1">
+                <button style={{marginLeft:"100px", marginTop:"20px", color:"white", background:"none", border:"none", cursor:"pointer", fontSize:"2em"} }
+                        onClick={GoToAbout} title="About Us">Library4u</button>
+
                 <div className="forms">
                     <h1 style={{color:"white"}}>Register</h1>
                     <form onSubmit={handleRegister}>

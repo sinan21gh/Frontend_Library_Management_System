@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import userIcon from "../assets/user-icon.jpg";
+import librarypfp from "../assets/librarypfp.jpg";
+
 import Dropdown from "../Dropdown.jsx";
 import {useNavigate} from "react-router-dom";
 
@@ -31,10 +33,14 @@ function PutAuthors(){
     function GoTo(){
         navigate(`/profile`);
     }
+    function goto(){
+        navigate(`/about`);
+    }
 
     return (
         <div className="body4">
             <header style={{textAlign:"center"}}>
+                <img src={librarypfp} onClick={goto} width="40px" style={{float:"left", cursor:"pointer", marginLeft:"10px"}} title="About Us"/>
                 <h1 style={{color:"white"}}>Update Author</h1>
             </header>
 

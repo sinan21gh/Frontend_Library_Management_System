@@ -1,10 +1,11 @@
 // src/components/AuthorList.jsx
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Dropdown from "../Dropdown.jsx";
 import userIcon from "../assets/user-icon.jpg";
 import {useNavigate} from "react-router-dom";
 import useIcon from "../assets/search.png";
+import librarypfp from "../assets/librarypfp.jpg";
 
 
 function AuthorList() {
@@ -53,9 +54,15 @@ function AuthorList() {
         navigate(`/profile`);
     }
 
+    function goto(){
+        navigate(`/about`);
+    }
+
     return (
         <div className="body1">
             <header style={{textAlign:"center"}}>
+                <img src={librarypfp} onClick={goto} width="40px" style={{float:"left", cursor:"pointer", marginLeft:"10px"}} title="About Us"/>
+
                 <h1 style={{color:"white"}}>Find Author by ID</h1>
             </header>
 

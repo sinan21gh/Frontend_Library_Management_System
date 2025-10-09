@@ -12,6 +12,8 @@ import PutBook from "./BookPages/PutBook.jsx";
 import AuthorList from "./AuthorPages/AuthorList.jsx";
 import AuthorSearchOneDetails from "./AuthorPages/AuthorSearchOneDetails.jsx";
 import PutAuthors from "./AuthorPages/PutAuthors.jsx";
+import AboutUs from "./AboutUs.jsx";
+import DeleteBook from "./BookPages/DeleteBook.jsx";
 
 
 function App() {
@@ -27,10 +29,13 @@ function App() {
                   <Route path="/book" element={<UploadBook />} />
                   <Route path="/getBook" element={<GetBook/>}></Route>
                   <Route path="/updateBook" element={<PutBook/>}></Route>
+                  <Route path="/deleteBook" element={<DeleteBook/>}></Route>
                   <Route path="/createAuthor" element={<PostAuthor/>}></Route>
                   <Route path="/getAllAuthors" element={<AuthorList/>}></Route>
                   <Route path="/getAuthor" element={<AuthorSearchOneDetails/>}></Route>
                   <Route path="/putAuthor" element={<PutAuthors/>}></Route>
+                  <Route path="/about" element={<AboutUs/>}></Route>
+
 
               </Routes>
           </BrowserRouter>
