@@ -1,4 +1,6 @@
 import {useNavigate} from "react-router-dom";
+import userIcon from "./assets/user-icon.jpg";
+
 
 function Dropdown(){
     const navigate = useNavigate();
@@ -8,6 +10,7 @@ function Dropdown(){
     }
 
     return(
+        <>
         <div className="container">
             <button className="cb">☰</button>
             <div className="dropdown">
@@ -17,17 +20,17 @@ function Dropdown(){
                     <li onClick={() => GoTo("")}>Register</li>
                     <li onClick={() => GoTo("book")}>Upload Book</li>
                     <li onClick={() => GoTo("books")}>Home</li>
-                    {/*<li onClick={() => GoTo("getBook")}>Search for a book</li>*/}
+                    <li onClick={() => GoTo("deleteBook")}>Delete a book</li>
                     <li onClick={() => GoTo("updateBook")}>Update Book</li>
                     <li onClick={() => GoTo("createAuthor")}>Create Author</li>
                     <li onClick={() => GoTo("getAllAuthors")}>Find All Authors</li>
                     <li onClick={() => GoTo("putAuthor")}>Full Update Author</li>
-
-
-
                 </ul>
             </div>
         </div>
+
+
+</>
     )
 }
 export default Dropdown

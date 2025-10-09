@@ -1,8 +1,9 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import axios from "axios";
 import Dropdown from "../Dropdown.jsx";
 import {useNavigate} from "react-router-dom";
 import userIcon from "../assets/user-icon.jpg";
+import librarypfp from "../assets/librarypfp.jpg";
 
 function PutBook(){
     const [isbn, setISBN] = useState("");
@@ -54,10 +55,16 @@ function PutBook(){
         navigate(`/profile`);
     }
 
+    function goto(){
+        navigate(`/about`);
+    }
+
     return (
         <>
             <div className="body3">
                 <header style={{textAlign:"center"}}>
+                    <img src={librarypfp} onClick={goto} width="40px" style={{float:"left", cursor:"pointer", marginLeft:"10px"}} title="About Us"/>
+
                     <h1 style={{color:"white"}}>Create/Update book</h1>
                 </header>
 

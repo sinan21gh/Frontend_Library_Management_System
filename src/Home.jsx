@@ -1,10 +1,11 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 import userIcon from './assets/user-icon.jpg';
 import useIcon from './assets/search.png';
 
 import {useNavigate} from "react-router-dom";
 import Dropdown from "./Dropdown.jsx";
+import librarypfp from "./assets/librarypfp.jpg";
 
 function Home(){
     const [books, setBooks] = useState([]);
@@ -58,10 +59,16 @@ function Home(){
         navigate(`/profile`);
     }
 
+    function goto(){
+        navigate(`/about`);
+    }
+
     return (
 
         <>
             <div className="body1">
+                <img src={librarypfp} onClick={goto} width="40px" style={{float:"left", cursor:"pointer", marginLeft:"10px"}} title="About Us"/>
+
                 <h2 style={{color:"white"}} className="n1">All Books</h2>
                 <div className="i22">
                     <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>

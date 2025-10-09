@@ -1,9 +1,10 @@
 
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Dropdown from "../Dropdown.jsx";
 import userIcon from "../assets/user-icon.jpg";
 import {useNavigate} from "react-router-dom";
+import librarypfp from "../assets/librarypfp.jpg";
 
 function PostAuthor() {
     const [name, setName] = useState("");
@@ -40,9 +41,14 @@ function PostAuthor() {
         navigate(`/profile`);
     }
 
+    function goto(){
+        navigate(`/about`);
+    }
+
     return (
         <div className="body4">
             <header style={{textAlign:"center"}}>
+                <img src={librarypfp} onClick={goto} width="40px" style={{float:"left", cursor:"pointer", marginLeft:"10px"}} title="About Us"/>
                 <h1 style={{color:"white"}}>Add Author</h1>
             </header>
 
