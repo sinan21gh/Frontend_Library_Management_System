@@ -13,17 +13,21 @@ function Register() {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            await axios.put("http://localhost:8080/register", {
+            const res = await axios.put("http://localhost:8080/register", {
                 username: username,
                 password: password,
                 email: emial
             });
-            setMessage("User registered successfully!");
+            if (res.status === 201){
+                navigate("/login");
+            }
 
-            navigate("/login");
+
         } catch (err) {
             console.error(err);
-            setMessage("Registration failed.");
+        if (err.status === 409){
+                setMessage("Username or password has been taken");
+            }
         }
     };
 
@@ -43,6 +47,7 @@ function Register() {
 
                 <div className="forms">
                     <h1 style={{color:"white"}}>Register</h1>
+                    <p>{message}</p>
                     <form onSubmit={handleRegister}>
                         <input
                             className="i1"

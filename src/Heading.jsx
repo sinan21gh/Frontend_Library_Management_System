@@ -8,13 +8,12 @@ function Heading(props){
     }
     return(
         <header className="heading2">
-            <h1>Library4u</h1>
+            <h1 onClick={() => goTo("about")}>Library4u</h1>
             <div className="heading2divs">
-                <button id="b111" onClick={() => goTo("")}>Create Account</button>
-                <button id="b222" onClick={() => goTo("login")}>Login</button>
+                <button id="b111" onClick={() => goTo("books")}>Home Page</button>
+                <button id="b222" onClick={() => goTo("profile")}>Profile</button>
             </div>
             <h2>{props.heading}</h2>
-
         </header>
     )
 }
