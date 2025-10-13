@@ -14,6 +14,7 @@ import AuthorSearchOneDetails from "./AuthorPages/AuthorSearchOneDetails.jsx";
 import PutAuthors from "./AuthorPages/PutAuthors.jsx";
 import AboutUs from "./AboutUs.jsx";
 import DeleteBook from "./BookPages/DeleteBook.jsx";
+import DeleteAuthor from "./AuthorPages/DeleteAuthor.jsx";
 
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
                   <Route path="/getAuthor" element={<AuthorSearchOneDetails/>}></Route>
                   <Route path="/putAuthor" element={<PutAuthors/>}></Route>
                   <Route path="/about" element={<AboutUs/>}></Route>
+                  <Route path="/deleteAuthor" element={<DeleteAuthor/>}></Route>
+
 
 
               </Routes>

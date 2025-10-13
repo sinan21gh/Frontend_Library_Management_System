@@ -728,7 +728,7 @@ body{
   border: none;
 }
 .heading2{
-  margin-top: -0px;
+  margin-top: -150px;
   position: fixed;
   background-color: rgb(179, 179, 179);
   height: 100px;
@@ -752,7 +752,7 @@ body{
 
 .heading2divs{
   margin-top: 15px;
-  margin-left: 60px;
+  margin-left: 70px;
   border: none;
   padding: 10px 15px;
   border-radius: 30px;
@@ -833,6 +833,43 @@ body{
 #b22:hover{
   cursor: pointer;
   background-color: aliceblue;
+}
+
+
+.db1{
+  margin-top: 150px;
+  border: 2px solid;
+  margin-left: 25%;
+  max-width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.db1 input{
+  display: block;
+  margin-bottom:30px;
+  padding: 10px 15px;
+  font-weight: bold;
+  width: 700px;
+}
+
+.db1 button{
+  padding: 10px 25px;
+  text-align: center;
+  margin-left: 40%;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  background-color: slategrey;
+  font-weight: bold;
+}
+
+.db1 button:hover{
+  color: white;
+  border: 1px solid;
+  background-color: grey;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {

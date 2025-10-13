@@ -25,6 +25,8 @@ function Dropdown(){
                     <li onClick={() => GoTo("createAuthor")}>Create Author</li>
                     <li onClick={() => GoTo("getAllAuthors")}>Find All Authors</li>
                     <li onClick={() => GoTo("putAuthor")}>Full Update Author</li>
+                    <li onClick={() => GoTo("deleteAuthor")}>Delete Author</li>
+
                 </ul>
             </div>
         </div>
