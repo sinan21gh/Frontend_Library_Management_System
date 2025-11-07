@@ -59,9 +59,6 @@ function DeleteAuthor() {
 
             <main>
                 <div style={{marginTop:"9.8%"}}></div>
-                <br/>
-                <br/>
-                <br/>
 
                 <div className="questions">
                     <ul className="aboutus">

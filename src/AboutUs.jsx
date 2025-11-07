@@ -34,7 +34,7 @@ function AboutUs(){
 
     return(
         <div>
-            <header className="heading1">
+            <header className=".app-header">
                 <h1>Library4u</h1>
                 <div className="heading1divs">
                     <button id="b11" onClick={() => goTo("")}>Create Account</button>

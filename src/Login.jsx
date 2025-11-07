@@ -41,22 +41,24 @@ function Login() {
     }
 
     return (
+        // <div className="body1">
         <div className="body1">
             <button style={{marginLeft:"100px", marginTop:"20px", color:"white", background:"none", border:"none", cursor:"pointer", fontSize:"2em"} }
                     onClick={GoToAbout} title="About Us">Library4u</button>
             <div className="forms">
                 <h1 style={{color:"white"}}>Login Page</h1>
-                <form onSubmit={handleLogin}>
+                <form onSubmit={handleLogin} >
                     <input
-                        className="i1"
+                        className="form-input"
                         type="text"
                         placeholder="Username"
                         value={username}
+
                         onChange={(e) => setUsername(e.target.value)}
                         required
                     /><br/>
                     <input
-                        className="i2"
+                        className="form-input"
                         type="password"
                         placeholder="Password"
                         value={password}

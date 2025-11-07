@@ -46,22 +46,20 @@ function PostAuthor() {
     }
 
     return (
-        <div className="body4">
-            <header style={{textAlign:"center"}}>
+        <div className="page-container">
+        <header style={{textAlign:"center"}}>
                 <img src={librarypfp} onClick={goto} width="40px" style={{float:"left", cursor:"pointer", marginLeft:"10px"}} title="About Us"/>
                 <h1 style={{color:"white"}}>Add Author</h1>
             </header>
 
             <nav>
-                <div className="i22">
-                    <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>
-                </div>
+
                 <Dropdown/>
 
 
             </nav>
 
-            <main className="postauthor">
+            <main className="form-container">
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"

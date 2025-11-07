@@ -61,7 +61,7 @@ function PutBook(){
 
     return (
         <>
-            <div className="body3">
+            <div className="page-container">
                 <header style={{textAlign:"center"}}>
                     <img src={librarypfp} onClick={goto} width="40px" style={{float:"left", cursor:"pointer", marginLeft:"10px"}} title="About Us"/>
 
@@ -69,15 +69,15 @@ function PutBook(){
                 </header>
 
                 <nav style={{marginBottom:"100px"}}>
-                    <div className="i22">
+                    {/*<div className="i22">
                         <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>
-                    </div>
+                    </div>*/}
                     <Dropdown/>
 
 
                 </nav>
 
-                <main className="puttingbooks">
+                <main className="form-container">
                     <form onSubmit={handlePut}>
                         <input type="text" placeholder="ISBN" value={isbn} onChange={(e) => setISBN(e.target.value)}
                         />

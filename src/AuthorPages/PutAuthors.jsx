@@ -38,20 +38,18 @@ function PutAuthors(){
     }
 
     return (
-        <div className="body4">
+        <div className="page-container">
             <header style={{textAlign:"center"}}>
-                <img src={librarypfp} onClick={goto} width="40px" style={{float:"left", cursor:"pointer", marginLeft:"10px"}} title="About Us"/>
+                <img src={librarypfp} onClick={goto} width="40px" height="40" style={{float:"left", cursor:"pointer", marginLeft:"10px"}} title="About Us"/>
                 <h1 style={{color:"white"}}>Update Author</h1>
             </header>
 
             <nav>
-                <div className="i22">
-                    <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>
-                </div>
+
                 <Dropdown/>
             </nav>
 
-            <main className="postauthorr">
+            <main className="form-container">
                 <input
                     type="text"
                     placeholder="Author ID"

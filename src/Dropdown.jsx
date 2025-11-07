@@ -12,12 +12,8 @@ function Dropdown(){
     return(
         <>
         <div className="container">
-            <button className="cb">☰</button>
             <div className="dropdown">
                 <ul>
-                    <li onClick={() => GoTo("login")}>Login</li>
-                    <li onClick={() => GoTo("profile")}>Profile</li>
-                    <li onClick={() => GoTo("")}>Register</li>
                     <li onClick={() => GoTo("book")}>Upload Book</li>
                     <li onClick={() => GoTo("books")}>Home</li>
                     <li onClick={() => GoTo("deleteBook")}>Delete a book</li>
@@ -26,6 +22,7 @@ function Dropdown(){
                     <li onClick={() => GoTo("getAllAuthors")}>Find All Authors</li>
                     <li onClick={() => GoTo("putAuthor")}>Full Update Author</li>
                     <li onClick={() => GoTo("deleteAuthor")}>Delete Author</li>
+                    <li onClick={() => GoTo("profile")}><img width="50" src={userIcon}></img></li>
 
                 </ul>
             </div>

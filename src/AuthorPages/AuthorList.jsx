@@ -59,7 +59,7 @@ function AuthorList() {
     }
 
     return (
-        <div className="body1">
+        <div className="page-container">
             <header style={{textAlign:"center"}}>
                 <img src={librarypfp} onClick={goto} width="40px" style={{float:"left", cursor:"pointer", marginLeft:"10px"}} title="About Us"/>
 
@@ -67,9 +67,7 @@ function AuthorList() {
             </header>
 
             <nav>
-                <div className="i22">
-                    <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>
-                </div>
+
 
                 <Dropdown/>
             </nav>
@@ -94,8 +92,8 @@ function AuthorList() {
             {error && <p>{error}</p>}
 
             {author && (
-                <div className="authorget">
-                    <img id="image4" src={userIcon} alt="User Profile" onClick={GoTo} title="User Profile"/>
+                <div className="cards" style={{marginLeft:"40%"}}>
+                    <img id="image4" src={userIcon} alt="User Profile" onClick={GoTo} title="User Profile" width="50"/>
 
                     <p style={{color:"white"}}><strong>ID:</strong> {author.authorid}</p>
                     <p style={{color:"white"}}><strong>Name:</strong> {author.name}</p>
@@ -106,7 +104,7 @@ function AuthorList() {
                 <div id="oneofff">
                     <ul>
                         {authors.map((author, index) => (
-                            <li key={index} className="cardss">
+                            <li key={index} className="cards">
                                 <p>Author ID: {author.authorid}</p>
                                 <p>Author Name: {author.name}</p>
                                 <p>Author Age: {author.age}</p>

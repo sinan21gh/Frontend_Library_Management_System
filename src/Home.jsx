@@ -66,13 +66,13 @@ function Home(){
     return (
 
         <>
-            <div className="body1">
-                <img src={librarypfp} onClick={goto} width="40px" style={{float:"left", cursor:"pointer", marginLeft:"10px"}} title="About Us"/>
+            <div className="page-container">
+            {/*<img src={librarypfp} onClick={goto} width="40px" style={{float:"left", cursor:"pointer", marginLeft:"10px"}} title="About Us"/>*/}
 
                 <h2 style={{color:"white"}} className="n1">All Books</h2>
-                <div className="i22">
-                    <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>
-                </div>
+                {/*<div className="i22">*/}
+                {/*    <img className="image2" src={userIcon} alt="User pfp" onClick={GoTo}/>*/}
+                {/*</div>*/}
 
                 <Dropdown/>
 
@@ -86,7 +86,7 @@ function Home(){
                                     placeholder="Enter ISBN"
                                     value={isbn}
                                     onChange={(e) => setIsbn(e.target.value)}/>
-                                <img id="s21" onClick={handleFetch} src={useIcon}/>
+                                {/*<img id="s21" onClick={handleFetch} src={useIcon}/>*/}
                             </div>
                         </section>
                     </main>
@@ -120,14 +120,14 @@ function Home(){
                             {books.map((book) => (
                                 <div key={book.isbn} className="cards">
                                     <h3>{book.title}</h3>
-                                    <img id="image1" src={userIcon} alt="User Profile" onClick={GoTo}/>
+                                    <img id="image1" src={userIcon} alt="User Profile" onClick={GoTo} width="50"/>
 
                                     <p>Author: {book?.authorid?.name}</p>
                                     {book.imageBase64 && (
                                         <img
                                             src={`data:image/jpeg;base64,${book.imageBase64}`}
                                             alt={book.title}
-                                            width="200"
+                                            width="200" height="200"
                                         />
                                     )}
                                 </div>

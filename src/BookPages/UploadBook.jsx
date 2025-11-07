@@ -42,22 +42,22 @@ function UploadBook() {
     }
 
     return (
-        <div className="body1">
+        <div className="page-container">
             <h2 className="n1" style={{color:"white"}}>Upload A Book Here</h2>
-            <div className="i22">
-                <img className="image2" src={userIcon} alt="User pfp" onClick={goTo} title="Your Prfile"/>
+            {/*<div className="i22">*/}
+            {/*    <img className="image2" src={userIcon} alt="User pfp" onClick={goTo} title="Your Prfile"/>*/}
 
-            </div>
+            {/*</div>*/}
 
             <Dropdown/>
 
             <div className="t1">
-                <form onSubmit={handleSubmit} className="bookupload">
-                    <input className="booki1" type="text" placeholder="ISBN" value={isbn} onChange={(e) => setIsbn(e.target.value)}  required maxLength="17"/>
-                    <input className="booki2" type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} required />
-                    <input className="booki3" type="number" placeholder="Author ID" value={authorId} onChange={(e) => setAuthorId(e.target.value)} required />
-                    <input className="booki4" type="file" onChange={(e) => setFile(e.target.files[0])} required/>
-                    <button className="booki5" type="submit">Upload Book</button>
+                <form onSubmit={handleSubmit} className="form-container">
+                    <input className="form-input" type="text" placeholder="ISBN" value={isbn} onChange={(e) => setIsbn(e.target.value)}  required maxLength="17"/>
+                    <input className="form-input" type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} required />
+                    <input className="form-input" type="number" placeholder="Author ID" value={authorId} onChange={(e) => setAuthorId(e.target.value)} required />
+                    <input className="form-input" type="file" onChange={(e) => setFile(e.target.files[0])} required/>
+                    <button className="form-button" type="submit">Upload Book</button>
                     <p style={{color:"white"}}>{message}</p>
                 </form>
             </div>

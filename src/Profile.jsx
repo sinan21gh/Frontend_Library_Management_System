@@ -7,6 +7,7 @@ import {useNavigate} from "react-router-dom";
 import Footer from "./Footer.jsx";
 import PopUp from "./PopUp.jsx";
 import Heading from "./Heading.jsx";
+import ThemeToggle from "./ThemeToggle.jsx";
 
 
 function Profile() {
@@ -33,28 +34,7 @@ function Profile() {
         fetchProfile();
     }, []);
 
-    /*const deleting = async () => {
-        try {
-            const token = localStorage.getItem("token");
-            const res = await axios.delete("http://localhost:8080/deleteuser", {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                }
-            });
 
-            if (res.status === 204){
-                setMessage("Successfully deleted");
-            }
-            setTimeout(() => {
-                navigate("/login")
-            }, 3000)
-        }
-        catch (e) {
-            console.log(e);
-            setMessage("Could not delete account")
-        }
-
-    }*/
 
     const popUp = () => {
         setTemp("c");
@@ -68,8 +48,8 @@ function Profile() {
     return (
         <>
 
-            <div className="body2">
-                <header className="heading3">
+            <div className="page-container profile-page">
+                <header className=".app-header">
                     <h1>Library4u</h1>
                     <div className="heading3divs">
                         <button id="b111" >Home Page</button>
@@ -77,6 +57,7 @@ function Profile() {
                     </div>
                     <h2>profile</h2>
                     <Dropdown/>
+                    <ThemeToggle />
                 </header>
                 <LogOut/>
 
